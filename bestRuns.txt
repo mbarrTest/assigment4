@@ -1,6 +1,10 @@
+#standard run
 python lm1.py --train data/train.pipe --dev data/dev.pipe
-python lm1.py --train data/train.pipe --dev data/dev.pipe --use_word 0 --use_char 1 --char_ngram_min 4 --char_ngram_max 5 --C 0.6
-python lm1.py --train data/train.pipe --dev data/dev.pipe --use_word 1 --use_char 0 --word_ngram_min 1 --word_ngram_max 3 --C 0.3
+
+#Best svm results
+python lm1.py --train data/train.pipe --dev data/dev.pipe --use_word 0 --use_char 1 --use_numeric 1 --char_ngram_min 4 --char_ngram_max 5 --C 0.5
+
+#Sanity check
 python lm1.py --train data/train.pipe --dev data/dev.pipe --C 0.3 --word_binary 1 --char_binary 1
 
 #Activate svm 
