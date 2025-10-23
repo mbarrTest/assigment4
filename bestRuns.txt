@@ -14,3 +14,8 @@ source svmf/bin/activate
 source lstm/bin/activate
 
 python lm2.py --train data/train.pipe --dev data/dev.pipe --emb_path data/embeddings/crawl-300d-2M.vec --save_dir runs/lstm_fasttext_crawl --batch_size 64 --lr 3e-3 --epochs 20 --hidden_size 256 --bidirectional 1 --freeze_embeddings 1 --max_len 100
+
+#Activate Roberta
+source roberta/bin/activate
+
+python lm3.py --train_path data/train.pipe --dev_path data/dev.pipe --model_name roberta-base --output_dir runs/roberta_offense --epochs 20 --batch_size 16 --lr 2e-5 --max_length 128 --bf16

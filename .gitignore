@@ -2,3 +2,6 @@ svmf
 lstm
 crawl-300d-2M.vec
 crawl-300d-2M.vec.zip
+roberta
+roberta_offense
+roberta_offense_base_192
