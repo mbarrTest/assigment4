@@ -1,5 +1,3 @@
-Train class counts: {'NOT(0)': 8192, 'OFF(1)': 4048}
-Dev   class counts: {'NOT(0)': 648, 'OFF(1)': 352}
 
 === DEV RESULTS ===
               precision    recall  f1-score   support
@@ -12,16 +10,29 @@ Dev   class counts: {'NOT(0)': 648, 'OFF(1)': 352}
 weighted avg       0.57      0.53      0.54      1000
 
 Accuracy:    0.5300
-Macro-F1:    0.5160   (primary)
+Macro-F1:    0.5160
 Weighted-F1: 0.5404
-ROC-AUC:     0.5275
-
-Per-class (P/R/F1/supp):
 NOT (0): P=0.6705 R=0.5401 F1=0.5983 supp=648
 OFF (1): P=0.3766 R=0.5114 F1=0.4337 supp=352
-
 Confusion matrix [rows=true, cols=pred] (NOT=0, OFF=1):
 [[350 298]
  [172 180]]
 
-Model saved to: svm_offense.joblib
+=== TEST RESULTS ===
+              precision    recall  f1-score   support
+
+         NOT       0.73      0.47      0.57       620
+         OFF       0.29      0.56      0.38       240
+
+    accuracy                           0.49       860
+   macro avg       0.51      0.51      0.48       860
+weighted avg       0.61      0.49      0.52       860
+
+Accuracy:    0.4942
+Macro-F1:    0.4767
+Weighted-F1: 0.5190
+NOT (0): P=0.7330 R=0.4694 F1=0.5723 supp=620
+OFF (1): P=0.2894 R=0.5583 F1=0.3812 supp=240
+Confusion matrix [rows=true, cols=pred] (NOT=0, OFF=1):
+[[291 329]
+ [106 134]]

@@ -1,11 +1,11 @@
 
 ========== FINAL EVALUATION (Best on Dev) ==========
-Accuracy:  0.7810
-Precision: 0.7034
-Recall:    0.6534
-F1 Score:  0.6775
+Accuracy:  0.7880
+Precision: 0.7229
+Recall:    0.6449
+F1 Score:  0.6817
 --------------------------------------
 Confusion Matrix:
-TP=230  FP=97
-TN=551  FN=122
+TP=227  FP=87
+TN=561  FN=125
 ====================================================
