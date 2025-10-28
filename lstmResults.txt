@@ -1,0 +1,16 @@
+
+========== FINAL DEV RESULTS ==========
+Accuracy:  0.7710
+Precision: 0.7113
+Recall:    0.5881
+F1 Score:  0.6439
+TP=207 FP=84 TN=564 FN=145
+=======================================
+
+========== FINAL TEST RESULTS ==========
+Accuracy:  0.8291
+Precision: 0.7688
+Recall:    0.5542
+F1 Score:  0.6441
+TP=133 FP=40 TN=580 FN=107
+=======================================

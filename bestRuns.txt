@@ -1,14 +1,8 @@
-#standard run
-python lm1.py --train data/train.pipe --dev data/dev.pipe
+#Activate svm 
+source svmf/bin/activate
 
 #Best svm results
 python lm1.py --train data/train.pipe --dev data/dev.pipe --use_word 0 --use_char 1 --use_numeric 1 --char_ngram_min 4 --char_ngram_max 5 --C 0.5
-
-#Sanity check
-python lm1.py --train data/train.pipe --dev data/dev.pipe --C 0.3 --word_binary 1 --char_binary 1
-
-#Activate svm 
-source svmf/bin/activate
 
 #Activate lstm
 source lstm/bin/activate
@@ -19,3 +13,20 @@ python lm2.py --train data/train.pipe --dev data/dev.pipe --emb_path data/embedd
 source roberta/bin/activate
 
 python lm3.py --train_path data/train.pipe --dev_path data/dev.pipe --model_name roberta-base --output_dir runs/roberta_offense --epochs 20 --batch_size 16 --lr 2e-5 --max_length 128 --bf16
+
+#FULL RUN emojis
+
+python lm1.py --train data/train.pipe --dev data/dev.pipe --test data/test.pipe --use_word 0 --use_char 1 --use_numeric 1 --char_ngram_min 4 --char_ngram_max 5 --C 0.5 > svmResults.txt
+
+python lm2.py --train data/train.pipe --dev data/dev.pipe --test data/test.pipe --emb_path data/embeddings/crawl-300d-2M.vec --batch_size 64 --lr 3e-3 --epochs 20 --hidden_size 256 --bidirectional 1 --freeze_embeddings 1 --max_len 100
+
+python lm3.py --train_path data/train.pipe --dev_path data/dev.pipe --test_path data/test.pipe --model_name roberta-base --output_dir runs/roberta_offense --epochs 20 --batch_size 16 --lr 2e-5 --max_length 128 --bf16 > robertaResults.txt
+
+#FULL RUN sans emojis 
+
+python lm1.py --train data/ftrain.pipe --dev data/fdev.pipe --test data/ftest.pipe --use_word 0 --use_char 1 --use_numeric 1 --char_ngram_min 4 --char_ngram_max 5 --C 0.5 > fsvmResults.txt
+
+python lm2.py --train data/ftrain.pipe --dev data/fdev.pipe --test data/ftest.pipe --emb_path data/embeddings/crawl-300d-2M.vec --batch_size 64 --lr 3e-3 --epochs 20 --hidden_size 256 --bidirectional 1 --freeze_embeddings 1 --max_len 100 --filtered
+
+python lm3.py --train_path data/ftrain.pipe --dev_path data/fdev.pipe --test_path data/ftest.pipe --model_name roberta-base --output_dir runs/roberta_offense --epochs 20 --batch_size 16 --lr 2e-5 --max_length 128 --bf16 > frobertaResults.txt
+

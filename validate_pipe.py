@@ -58,17 +58,17 @@ def main():
     for p in sys.argv[1:]:
         path = Path(p)
         if not path.exists():
-            print(f"❌ File not found: {path}")
+            print(f" File not found: {path}")
             exit_code = 2
             continue
 
         total, empty, bad = check_file(path)
-        print(f"\n📄 {path} — lines: {total} (empty: {empty})")
+        print(f"\n {path} — lines: {total} (empty: {empty})")
         if not bad:
-            print("✅ All non-empty lines look valid: message|OFF or message|NOT")
+            print("All non-empty lines look valid: message|OFF or message|NOT")
             continue
 
-        print(f"⚠️ Found {len(bad)} malformed line(s):")
+        print(f" Found {len(bad)} malformed line(s):")
         for ln, reason, line in bad[:50]:
             print(f"  - Line {ln}: {reason}\n    {line}")
 

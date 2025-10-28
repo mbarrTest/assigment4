@@ -1,0 +1,92 @@
+=== DEV RESULTS @ 2025-10-28T11:34:50.244276 ===
+Accuracy: 0.7840
+Macro Precision: 0.7637
+Macro Recall: 0.7723
+Macro F1: 0.7673
+Weighted F1: 0.7857
+
+Confusion Matrix (rows=true, cols=pred):
+     NOT  OFF
+NOT  526  122
+OFF   94  258
+
+Classification Report:
+              precision    recall  f1-score   support
+
+         NOT       0.85      0.81      0.83       648
+         OFF       0.68      0.73      0.70       352
+
+    accuracy                           0.78      1000
+   macro avg       0.76      0.77      0.77      1000
+weighted avg       0.79      0.78      0.79      1000
+
+
+=== TEST RESULTS @ 2025-10-28T11:34:52.327885 ===
+Accuracy: 0.8256
+Macro Precision: 0.7827
+Macro Recall: 0.7884
+Macro F1: 0.7854
+Weighted F1: 0.8264
+
+Confusion Matrix (rows=true, cols=pred):
+     NOT  OFF
+NOT  541   79
+OFF   71  169
+
+Classification Report:
+              precision    recall  f1-score   support
+
+         NOT       0.88      0.87      0.88       620
+         OFF       0.68      0.70      0.69       240
+
+    accuracy                           0.83       860
+   macro avg       0.78      0.79      0.79       860
+weighted avg       0.83      0.83      0.83       860
+
+
+=== DEV RESULTS @ 2025-10-28T12:51:27.413433 ===
+Accuracy: 0.7870
+Macro Precision: 0.7666
+Macro Recall: 0.7662
+Macro F1: 0.7664
+Weighted F1: 0.7869
+
+Confusion Matrix (rows=true, cols=pred):
+     NOT  OFF
+NOT  542  106
+OFF  107  245
+
+Classification Report:
+              precision    recall  f1-score   support
+
+         NOT       0.84      0.84      0.84       648
+         OFF       0.70      0.70      0.70       352
+
+    accuracy                           0.79      1000
+   macro avg       0.77      0.77      0.77      1000
+weighted avg       0.79      0.79      0.79      1000
+
+
+=== TEST RESULTS @ 2025-10-28T12:51:29.397000 ===
+Accuracy: 0.8314
+Macro Precision: 0.7919
+Macro Recall: 0.7835
+Macro F1: 0.7875
+Weighted F1: 0.8302
+
+Confusion Matrix (rows=true, cols=pred):
+     NOT  OFF
+NOT  553   67
+OFF   78  162
+
+Classification Report:
+              precision    recall  f1-score   support
+
+         NOT       0.88      0.89      0.88       620
+         OFF       0.71      0.68      0.69       240
+
+    accuracy                           0.83       860
+   macro avg       0.79      0.78      0.79       860
+weighted avg       0.83      0.83      0.83       860
+
+

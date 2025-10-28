@@ -48,7 +48,7 @@ def convert_tsv_to_pipe(input_path, output_path=None):
                 else:
                     skipped += 1
 
-    print(f"✅ Cleaned: {input_path} → {output_path}")
+    print(f" Cleaned: {input_path} → {output_path}")
     print(f"   Lines processed: {cleaned}")
     if skipped:
         print(f"   ⚠️ Skipped {skipped} malformed lines.")
